@@ -57,4 +57,6 @@ Best effort has been taken from the Nest team to make every love expressed.
 
 Some Screentshots:
 
-https://github.com/eldhok/NeverStopLovingApp/blob/master/Screen%20Shots/Screenshot_2017-03-31-19-29-36.png
+![](Screen%20Shots/Screenshot_2017-03-31-18-54-35.png)
+![](Screen%20Shots/Screenshot_2017-03-31-19-28-44.png)
+![](Screen%20Shots/Screenshot_2017-03-31-19-29-36.png)
