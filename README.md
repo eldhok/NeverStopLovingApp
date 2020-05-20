@@ -26,7 +26,6 @@ So start Nesting from now, express your love wisely .
 
 Love an unexplainable feeling, an expression.
 Time only comes once in your life , make use of it wisely .
-So download Nest and share it with your friends .
 
 If you feel the fear now, you will regret in future.
 
@@ -55,3 +54,7 @@ Nest helps you cut away all the above mentioned problems.
 Nest helps you to express your Love without ruining your friendship.
 Nest makes the best efforts to make your Love success.
 Best effort has been taken from the Nest team to make every love expressed.
+
+Some Screentshots:
+
+https://github.com/eldhok/NeverStopLovingApp/blob/master/Screen%20Shots/Screenshot_2017-03-31-19-29-36.png
