@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:paddingTop="@dimen/space10"
+    android:paddingBottom="@dimen/space10"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+>
+<LinearLayout
+    android:id="@+id/l"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:orientation="horizontal"
+    android:gravity="center_vertical">
+
+    <RelativeLayout
+        android:id="@+id/la"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        >
+
+        <com.meg7.widget.CircleImageView
+            android:id="@+id/image_chat"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="centerCrop"
+            android:layout_marginRight="@dimen/space10"
+            />
+        <!--
+
+    <ImageView
+        android:id="@+id/image_chat"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="@dimen/space10"
+        android:background="@drawable/grid_el"
+        />
+        -->
+
+    <TextView
+        android:id="@+id/imText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/image_chat"
+        android:layout_alignTop="@+id/image_chat"
+        android:layout_alignRight="@+id/image_chat"
+        android:layout_alignBottom="@+id/image_chat"
+        android:gravity="center"
+        android:textSize="25dp"
+        android:text="S"
+        android:padding="2dp"
+        android:textStyle="normal"
+        android:textColor="@color/white"
+        />
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/message"
+        android:layout_toLeftOf="@id/timestamp"
+        android:maxWidth="@dimen/maxwidth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/space10"
+        android:text="Hi, joe how are you, do you like to join  do you like to join our party in next"
+        android:textColor="@color/white"
+        android:textSize="@dimen/h3"
+        android:background="@drawable/bg_chat_you"/>
+    <TextView
+        android:id="@+id/timestamp"
+        android:layout_marginLeft="@dimen/space10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/space5"
+        android:drawableLeft="@drawable/ic_clock"
+        android:text="5:04pm"
+        android:textColor="@color/colorTextInfo"
+        android:textSize="@dimen/h4"
+        android:layout_centerVertical="true"/>
+</LinearLayout>
+    <LinearLayout
+        android:id="@+id/date"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/space10"
+        android:visibility="gone"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15 September"
+            android:textColor="@color/colorTextInfo"
+            android:textSize="@dimen/h3"
+            />
+    </LinearLayout>
+</RelativeLayout>

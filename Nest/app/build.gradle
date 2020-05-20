@@ -1,0 +1,47 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '25.0.0'
+    defaultConfig {
+        applicationId 'com.stoplovingnever.nest'
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 14
+        versionName "1.13"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+}
+repositories {
+    mavenCentral() // jcenter() works as well because it pulls from Maven Central
+}
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    // compile "com.google.android.gms:play-services:8.3.0"
+    compile 'agency.tango.android:material-intro-screen:0.0.5'
+    compile 'com.android.support:appcompat-v7:25.2.0'
+    compile 'com.android.support:design:25.2.0'
+    compile 'com.mcxiaoke.volley:library-aar:1.0.0'
+    compile 'com.android.support:recyclerview-v7:25.2.0'
+    compile 'com.google.firebase:firebase-messaging:10.0.1'
+    compile 'com.google.android.gms:play-services-ads:10.0.1'
+    compile 'com.googlecode.libphonenumber:libphonenumber:7.0.4'
+    compile 'uk.co.chrisjenx:calligraphy:2.2.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.mostafagazar:customshapeimageview:1.0.4'
+    //compile files('libs/PGSDK_v1.0.jar')
+    testCompile 'junit:junit:4.12'
+}
+
+apply plugin: 'com.google.gms.google-services'
+
+
+
+

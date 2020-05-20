@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_contacts"
+            android:icon="@drawable/crush_add"
+            android:title="Add Crush +" />
+        <item
+            android:id="@+id/nav_chats"
+            app:actionViewClass="android.widget.TextView"
+            android:icon="@drawable/chat_nav"
+            android:title="Chats" />
+
+        <item
+            android:id="@+id/nav_add_credit"
+            android:icon="@drawable/cart"
+            android:title="Add Credits" />
+        <item
+            android:id="@+id/nav_credit_left"
+            android:icon="@drawable/chat_nav"
+            android:title="Credits Left " />
+        <item
+            android:id="@+id/nav_refresh_contacts"
+            android:icon="@drawable/refresh"
+            android:title="Refresh Contacts" />
+
+
+        <item
+            android:title="" />
+        <item
+            android:id="@+id/compliant"
+            android:icon="@drawable/excla"
+            android:title="Register Compliant" />
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/whatsapp_share"
+            android:title="Share via Whatsapp" />
+
+        <item
+             android:id="@+id/nav_logout"
+             android:icon="@drawable/logout"
+             android:title="Logout" />
+
+
+        <!--  <item
+                android:id="@+id/likes"
+                android:icon="@drawable/like"
+                android:title=" People Likes You " />
+                -->
+       <!--
+
+        <item
+            android:id="@+id/nav_trash"
+            app:actionViewClass="android.widget.TextView"
+            android:icon="@drawable/ic_action_trash"
+            android:title="Trash" />
+            -->
+    </group>
+
+</menu>

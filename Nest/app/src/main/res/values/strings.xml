@@ -1,0 +1,40 @@
+<resources>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="hint_name">Full Name</string>
+    <string name="hint_email">Email</string>
+    <string name="err_msg_name">Enter full name</string>
+    <string name="err_msg_email">Enter valid email address</string>
+    <string name="title_activity_chat_room_discussion">ChatRoomDiscussionActivity</string>
+    <string name="action_logout">Logout</string>
+
+
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="list_empty_friends">None of your Friends have started using NEST\n Be the first one to Invite them to the Beautiful world of LOVE !</string>
+
+
+    <string name="app_name">Nest</string>
+    <string name="hello_world">Hello world!</string>
+
+    <string name="name">Name</string>
+    <string name="next">NEXT</string>
+    <string name="number">Number</string>
+    <string name="conf_code">Enter the OPT code.Sit back and Relax while we Verify your mobile number</string>
+    <string name="Proceed">Proceed</string>
+    <string name="msg_enter_mobile">Enter your mobile number to get started!</string>
+    <string name="lbl_submit">SUBMIT</string>
+    <string name="lbl_enter_otp">Enter OTP</string>
+    <string name="msg_sit_back">Sit back &amp; Relax ! While we send OTP to your mobile number</string>
+    <string name="msg_manual_otp">(Enter the OTP below as soon as you get it)</string>
+    <string name="list_empty">You have no Crush yet .\nSave someone in your crush list and give them clues !\n Text message will be sent to their phone anonymously .\nConfuse them intelligently\n with your clues .\nClick on the crush button, add number and get into the new\n World of Love !</string>
+</resources>

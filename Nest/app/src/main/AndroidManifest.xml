@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.stoplovingnever.nest">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- needed for older devices -
+     used to check app background / foreground status -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <!-- START Added for GCM -->
+
+   <!--
+    <permission
+        android:name="nestt.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="nestt.permission.C2D_MESSAGE" />
+    -->
+    <!-- END Added for GCM -->
+    <uses-permission android:name="android.permission.RECEIVE_SMS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_SMS" />
+  <!--  <uses-permission android:name="android.permission.SEND_SMS" />-->
+
+
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <!-- For checking current network state -->
+
+    <!-- For waking device from sleep for showing notification -->
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <!-- For vibrating device -->
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <!-- For receiving GCM messages -->
+    <uses-permission
+        android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <!-- For protecting GCM messages so that only your app can receive them -->
+
+
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+
+
+
+    <application
+        android:name="com.stoplovingnever.nest.app.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:largeHeap="true">
+
+        <activity
+            android:name="com.stoplovingnever.nest.activity.Splash"
+            android:theme="@style/AppThemeFull"/>
+        <activity
+            android:name="com.stoplovingnever.nest.activity.IntroActivity"
+            android:theme="@style/Theme.Intro" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.stoplovingnever.nest.activity.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="com.stoplovingnever.nest.activity.LoginActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity
+            android:name="com.stoplovingnever.nest.activity.ChatRoomActivity"
+            android:label="@string/title_activity_chat_room_discussion"
+            android:parentActivityName="com.stoplovingnever.nest.activity.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.stoplovingnever.nest.activity.MainActivity" />
+        </activity>
+
+        <activity
+            android:name="com.stoplovingnever.nest.activity.ProfileScreenXMLUIDesign"
+            android:label="Profile"
+            android:parentActivityName="com.stoplovingnever.nest.activity.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.stoplovingnever.nest.activity.MainActivity" />
+        </activity>
+<!--       commented due to security issues for now from google play    -->
+<!--
+        <activity
+            android:name="com.paytm.pgsdk.PaytmPGActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation|keyboard"/>
+-->
+
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:theme="@android:style/Theme.Translucent" />
+
+        <!-- START Added for GCM -->
+        <receiver android:name="com.stoplovingnever.nest.activity.IncomingSms">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
+            </intent-filter>
+        </receiver>
+
+<!--
+        <receiver android:name="stoplovingnever.nest.activity..SmsReceiver">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
+            </intent-filter>
+        </receiver>
+-->
+
+
+        <!--
+        <receiver
+            android:name="com.google.android.gms.nest.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="nestt" />
+            </intent-filter>
+        </receiver>
+        -->
+        <service
+            android:name="com.stoplovingnever.nest.gcm.MyInstanceIDListenerService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name="com.stoplovingnever.nest.gcm.MyFcmListenerService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+
+       <!--
+        <service
+            android:name=".nest.MyGcmPushReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name=".nest.GcmIntentService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID" />
+            </intent-filter>
+        </service>
+-->
+        <!-- END Added for GCM -->
+    </application>
+
+</manifest>

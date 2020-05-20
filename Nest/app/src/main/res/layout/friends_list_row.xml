@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    >
+    <RelativeLayout
+        android:id="@+id/rl_photo"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/space10"
+        android:layout_marginRight="@dimen/space10"
+        >
+
+        <!--
+                <ImageView
+                    android:id="@+id/myImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                   android:background="@drawable/grid_elemt_style"
+                    />
+
+        -->
+
+
+        <com.meg7.widget.CircleImageView
+            android:id="@+id/myImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            />
+
+
+        <TextView
+            android:id="@+id/myImageViewText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/myImageView"
+            android:layout_alignTop="@+id/myImageView"
+            android:layout_alignRight="@+id/myImageView"
+            android:layout_alignBottom="@+id/myImageView"
+            android:gravity="center"
+            android:textSize="28dp"
+            android:textStyle="normal"
+            android:textColor="@color/white"
+            />
+
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/l"
+        android:layout_width="wrap_content"
+        android:layout_height="90dp"
+        android:paddingRight="@dimen/space10"
+        android:layout_toRightOf="@+id/rl_photo"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical">
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Laura Owens"
+                android:elegantTextHeight="true"
+                android:textSize="18dp"
+                android:textColor="@android:color/black"
+                android:maxLines="1"
+                android:maxLength="12"
+                android:ellipsize="end"
+                />
+
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_crush"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/rl_like"
+        android:layout_marginLeft="@dimen/space10"
+        >
+
+        <!--
+                <ImageView
+                    android:id="@+id/myImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                   android:background="@drawable/grid_elemt_style"
+                    />
+
+        -->
+
+
+        <com.meg7.widget.CircleImageView
+            android:id="@+id/crush"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:background="@drawable/heart"/>
+
+
+
+        <TextView
+            android:id="@+id/crush_count"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="-2dp"
+            android:gravity="center"
+            android:text="3"
+            android:textSize="9sp"
+            android:textColor="@color/colorAccent"
+            android:background="@drawable/bg_unread"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_like"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="@dimen/space10"
+        android:layout_marginRight="@dimen/space10"
+        >
+
+        <!--
+                <ImageView
+                    android:id="@+id/myImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                   android:background="@drawable/grid_elemt_style"
+                    />
+
+        -->
+
+
+        <com.meg7.widget.CircleImageView
+            android:id="@+id/like"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:background="@drawable/like"/>
+
+
+
+        <TextView
+            android:id="@+id/like_count"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="-2dp"
+            android:gravity="center"
+            android:text="3"
+            android:textSize="9sp"
+            android:textColor="@color/colorAccent"
+            android:background="@drawable/bg_unread"/>
+    </RelativeLayout>
+</RelativeLayout>
+
